@@ -9,14 +9,15 @@ const Header = () => {
   const nav = [
     { to: "/", label: "Home" },
     { to: "/about", label: "About" },
-    { to: "/services", label: "Services" },
-    { to: "/products", label: "Products" },
-    { to: "/hire-labour", label: "Hire Labour" },
-    { to: "/projects", label: "Projects" },
+    { to: "/service", label: "Services" },
+    { to: "/product", label: "Products" },
+    { to: "/hirelabour", label: "Hire Labour" },
+    { to: "/project", label: "Projects" },
     { to: "/contact", label: "Contact" },
   ];
 
   return (
+    
     <header className="bg-white shadow-md fixed top-0 w-full z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
 

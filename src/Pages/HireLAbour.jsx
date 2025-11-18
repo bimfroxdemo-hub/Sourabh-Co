@@ -13,7 +13,7 @@ const labourCategories = [
   { title: "Supervisor", rate: "₹1500-2500/day" },
 ];
 
-const HireLAbour = () => {
+const HireLabour = () => {
   return (
     <div className="min-h-screen bg-white pt-24 px-4 pb-20">
       <div className="max-w-6xl mx-auto">
@@ -68,4 +68,4 @@ const HireLAbour = () => {
   );
 };
 
-export default HireLAbour;
+export default HireLabour;

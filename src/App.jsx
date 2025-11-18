@@ -40,7 +40,7 @@ const App = () => {
           <Route path="/Service" element={<Service />} />
           <Route path="/product" element={<Product />} />
           <Route path="/project" element={<Project />} />
-          <Route path="/hire-labour" element={<HireLabour />} />
+          <Route path="/hirelabour" element={<HireLabour />} />
           <Route path="/contact" element={<Context />} />
         
           {/* 404 fallback */}
