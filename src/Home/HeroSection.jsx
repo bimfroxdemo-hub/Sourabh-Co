@@ -3,14 +3,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 
 // Import images from src/assets
+import img7 from "../assets/33.png";
 import img1 from "../assets/1.png";
-import img2 from "../assets/2.png";
+
 import img3 from "../assets/3.png";
-import img4 from "../assets/4.png";
-import img5 from "../assets/5.png";
+
+import img6 from "../assets/22.png";
 
 // Array of images
-const images = [img1, img2, img3, img4, img5];
+const images = [img7,img6 ,img1,  img3];
 
 const HeroSection = () => {
   const [index, setIndex] = useState(0);
