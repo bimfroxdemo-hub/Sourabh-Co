@@ -6,8 +6,13 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const CTASection = () => {
   return (
-    <section className="py-20 bg-red-600 text-white text-center px-4">
-      
+    <section
+      className="py-20 text-gray-900 text-center px-4"
+      style={{
+      background:
+      "linear-gradient(180deg, #ffffff 0%, #d7eaff 40%, #a6cff5 100%, #7bb6ee 100%)",
+      }}
+      >      
       {/* Heading */}
       <motion.h2
         initial={{ x: -50, opacity: 0 }}
@@ -51,7 +56,7 @@ const CTASection = () => {
           initial={{ y: 40, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex items-center gap-2 bg-white text-red-600 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-200 w-full sm:w-auto justify-center shadow"
+          className="flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-200 w-full sm:w-auto justify-center shadow"
         >
           <FiPhoneCall className="text-2xl" />
           Call: 6358900891
@@ -67,7 +72,7 @@ const CTASection = () => {
       >
         <Link
           to="/contact"
-          className="inline-block mt-6 bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 text-lg shadow"
+          className="inline-block mt-6 bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 text-lg shadow"
         >
           Request Quote
         </Link>

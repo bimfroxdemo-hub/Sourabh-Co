@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -10,10 +11,11 @@ import {
   FiCheckCircle,
 } from "react-icons/fi";
 
-// ⭐ Premium Service Data
+const ACCENT = "#0ea5e9"; // sky-blue accent
+
 const services = [
   {
-    icon: <FiWind className="text-red-600 text-4xl" />,
+    icon: <FiWind className="text-[40px]" style={{ color: ACCENT }} />,
     title: "HVAC & Industrial Ducting",
     desc: "Complete HVAC setup including GI/SS ducting, AHU installation and ventilation systems.",
     features: [
@@ -24,7 +26,7 @@ const services = [
     ],
   },
   {
-    icon: <FiLayers className="text-red-600 text-4xl" />,
+    icon: <FiLayers className="text-[40px]" style={{ color: ACCENT }} />,
     title: "Hot & Cold Thermal Insulation",
     desc: "High-grade insulation for pipelines, plants, machinery and commercial buildings.",
     features: [
@@ -35,7 +37,7 @@ const services = [
     ],
   },
   {
-    icon: <FiTool className="text-red-600 text-4xl" />,
+    icon: <FiTool className="text-[40px]" style={{ color: ACCENT }} />,
     title: "Scaffolding & Industrial Painting",
     desc: "Reliable scaffolding with professional industrial painting and coating solutions.",
     features: [
@@ -46,7 +48,7 @@ const services = [
     ],
   },
   {
-    icon: <FiCpu className="text-red-600 text-4xl" />,
+    icon: <FiCpu className="text-[40px]" style={{ color: ACCENT }} />,
     title: "Pipeline & Structural Fabrication",
     desc: "Fabrication & erection of pipelines, steel structures, tanks and industrial assemblies.",
     features: [
@@ -57,7 +59,7 @@ const services = [
     ],
   },
   {
-    icon: <FiBox className="text-red-600 text-4xl" />,
+    icon: <FiBox className="text-[40px]" style={{ color: ACCENT }} />,
     title: "Material & Labour Contracting",
     desc: "Skilled manpower and material supply for industries & construction projects.",
     features: [
@@ -68,7 +70,7 @@ const services = [
     ],
   },
   {
-    icon: <FiHome className="text-red-600 text-4xl" />,
+    icon: <FiHome className="text-[40px]" style={{ color: ACCENT }} />,
     title: "Construction & Renovation",
     desc: "End-to-end construction, renovation and interior decoration services.",
     features: [
@@ -82,15 +84,19 @@ const services = [
 
 const Service = () => {
   return (
-    <div className="min-h-screen bg-white pt-28 px-4 pb-20">
+    <div
+      className="min-h-screen pt-28 px-4 pb-20"
+style={{
+  background:
+    "linear-gradient(180deg, #ffffff 0%, #cfe9f9 30%, #91c8f0 80%, #62b2e6 100%)",
+}}
+    >
       <div className="max-w-7xl mx-auto">
-
-        {/* ⭐ PAGE HEADER */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-4xl md:text-5xl font-bold text-center mb-4"
+          className="text-4xl md:text-5xl font-bold text-center mb-4 text-slate-800"
         >
           Our Services
         </motion.h1>
@@ -101,10 +107,10 @@ const Service = () => {
           transition={{ delay: 0.3 }}
           className="text-gray-600 text-lg text-center max-w-2xl mx-auto mb-12"
         >
-          Construction, fabrication, insulation, labour supply, HVAC, painting and complete industrial services — all in one place.
+          Construction, fabrication, insulation, labour supply, HVAC, painting
+          and complete industrial services — all in one place.
         </motion.p>
 
-        {/* ⭐ SERVICES GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
@@ -113,42 +119,52 @@ const Service = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="border border-gray-200 bg-gray-50 rounded-xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+              className="border border-gray-200 bg-white rounded-xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
             >
-              {/* ICON + TITLE */}
               <div className="flex items-center gap-4 mb-4">
-                <div className="p-4 rounded-full bg-red-100 shadow">
+                <div
+                  className="p-4 rounded-full shadow"
+                  style={{ backgroundColor: ACCENT + "22" }} // 13% opacity
+                >
                   {service.icon}
                 </div>
-                <h2 className="text-2xl font-bold">{service.title}</h2>
+                <h2 className="text-2xl font-bold text-slate-800">
+                  {service.title}
+                </h2>
               </div>
 
-              {/* DESCRIPTION */}
               <p className="text-gray-600 mb-4">{service.desc}</p>
 
-              {/* FEATURES */}
-              <h3 className="font-semibold mb-3">Key Features:</h3>
+              <h3 className="font-semibold mb-3 text-slate-700">
+                Key Features:
+              </h3>
+
               <ul className="space-y-2">
                 {service.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2 text-gray-700">
-                    <FiCheckCircle className="text-red-600 mt-1" />
+                  <li
+                    key={feature}
+                    className="flex items-start gap-2 text-gray-700"
+                  >
+                    <FiCheckCircle
+                      className="mt-1"
+                      style={{ color: ACCENT }}
+                    />
                     {feature}
                   </li>
                 ))}
               </ul>
 
-              {/* BUTTON */}
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 href="/quote"
-                className="inline-block mt-6 bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition"
+                style={{ backgroundColor: ACCENT }}
+                className="inline-block mt-6 text-white px-6 py-2 rounded-lg hover:opacity-90 transition"
               >
                 Request Estimate
               </motion.a>
             </motion.div>
           ))}
         </div>
-
       </div>
     </div>
   );

@@ -13,39 +13,47 @@ import {
 const Catogery = () => {
   const categories = [
     {
-      icon: <FiCpu className="text-red-600 text-5xl mx-auto" />,
+      icon: <FiCpu className="text-blue-600 text-5xl mx-auto" />,
       title: "Pipeline & Fabrication",
       desc: "Pipeline, welding & structural fabrication.",
     },
     {
-      icon: <FiLayers className="text-red-600 text-5xl mx-auto" />,
+      icon: <FiLayers className="text-blue-600 text-5xl mx-auto" />,
       title: "Thermal Insulation",
       desc: "Hot & cold insulation works for industries.",
     },
     {
-      icon: <FiWind className="text-red-600 text-5xl mx-auto" />,
+      icon: <FiWind className="text-blue-600 text-5xl mx-auto" />,
       title: "HVAC & Insulation",
       desc: "Duct fabrication, installation & insulation.",
     },
     {
-      icon: <FiTool className="text-red-600 text-5xl mx-auto" />,
+      icon: <FiTool className="text-blue-600 text-5xl mx-auto" />,
       title: "Labour & Contracting",
       desc: "Skilled labour with supervision.",
     },
     {
-      icon: <FiUsers className="text-red-600 text-5xl mx-auto" />,
+      icon: <FiUsers className="text-blue-600 text-5xl mx-auto" />,
       title: "Professional Experts",
       desc: "Verified, trained and experienced manpower.",
     },
     {
-      icon: <FiBox className="text-red-600 text-5xl mx-auto" />,
+      icon: <FiBox className="text-blue-600 text-5xl mx-auto" />,
       title: "Material Supply",
       desc: "All construction materials available at best rates.",
     },
   ];
 
   return (
-    <section className="py-20 bg-white">
+<section
+  className="py-20"
+  style={{
+    background:
+      "linear-gradient(180deg, #ffffff 0%, #d7eaff 40%, #a6cff5 100%, #7bb6ee 100%)",
+  }}
+>
+
+
       <div className="max-w-7xl mx-auto px-4">
 
         {/* Section Heading */}
@@ -88,7 +96,7 @@ const Catogery = () => {
         </div>
 
         {/* Bottom Description */}
-        <div className="mt-16 text-center max-w-3xl mx-auto text-gray-700 text-lg">
+        <div className="mt-12 text-center max-w-3xl mx-auto text-gray-700 text-lg">
           We aim to deliver everything you need to complete your construction
           and industrial projects — from skilled manpower to high-quality
           materials, fabrication, HVAC works, safety equipment and more.
