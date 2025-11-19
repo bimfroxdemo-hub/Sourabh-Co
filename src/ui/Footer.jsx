@@ -1,11 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FiFacebook, FiTwitter, FiInstagram, FiLinkedin } from "react-icons/fi";
+import {
+  FiFacebook,
+  FiTwitter,
+  FiInstagram,
+  FiLinkedin,
+} from "react-icons/fi";
+
+import logo from "../assets/logo.png"; // FIXED LOGO IMPORT
 
 const Footer = () => {
   return (
     <footer
-      className="text-white"
+      className="text-white w-full"
       style={{
         backgroundColor: "#000",
         backgroundImage:
@@ -13,22 +20,23 @@ const Footer = () => {
         backgroundSize: "22px 22px",
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-2 md:grid-cols-4 gap-10">
-        
+      <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+
         {/* ABOUT */}
-        <div className="col-span-2 md:col-span-1">
-          <h2 className="font-bold text-lg mb-3 text-white">Saurabh Corporation</h2>
-          <p className="text-gray-300 text-sm">
-            Your trusted partner for construction materials, labour supply &
-            industrial services.
+        <div>
+          <img src={logo} alt="Saurabh Corporation Logo" className="w-60 mb-3" />
+
+          <p className="text-gray-300 text-sm leading-relaxed">
+            Your trusted partner for construction materials, labour supply & industrial services.
           </p>
 
-          {/* <div className="flex gap-4 mt-4 text-xl">
-            <FiFacebook className="hover:text-blue-500 cursor-pointer" />
-            <FiTwitter className="hover:text-blue-500 cursor-pointer" />
-            <FiInstagram className="hover:text-blue-500 cursor-pointer" />
-            <FiLinkedin className="hover:text-blue-500 cursor-pointer" />
-          </div> */}
+          {/* Social Icons */}
+          <div className="flex gap-4 mt-5 text-xl">
+            <FiFacebook className="hover:text-blue-500 cursor-pointer transition" />
+            <FiTwitter className="hover:text-blue-500 cursor-pointer transition" />
+            <FiInstagram className="hover:text-pink-500 cursor-pointer transition" />
+            <FiLinkedin className="hover:text-blue-500 cursor-pointer transition" />
+          </div>
         </div>
 
         {/* QUICK LINKS */}
@@ -67,32 +75,32 @@ const Footer = () => {
         <div>
           <h3 className="font-bold mb-4 text-white">Services</h3>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li className="hover:text-blue-500">HVAC & Ducting</li>
-            <li className="hover:text-blue-500">Insulation Works</li>
-            <li className="hover:text-blue-500">Fabrication</li>
-            <li className="hover:text-blue-500">Painting & Scaffolding</li>
-            <li className="hover:text-blue-500">Labour Contracting</li>
+            <li className="hover:text-blue-500 transition">HVAC & Ducting</li>
+            <li className="hover:text-blue-500 transition">Insulation Works</li>
+            <li className="hover:text-blue-500 transition">Fabrication</li>
+            <li className="hover:text-blue-500 transition">Painting & Scaffolding</li>
+            <li className="hover:text-blue-500 transition">Labour Contracting</li>
           </ul>
         </div>
 
         {/* CONTACT */}
         <div>
           <h3 className="font-bold mb-4 text-white">Contact</h3>
+
           <p className="text-gray-300 text-sm leading-relaxed">
             63, Mangaldeep, Rajpipla Road,<br />
             Ankleshwar, Bharuch 393001,<br />
             Gujarat, India
           </p>
 
-          <p className="mt-3 text-gray-300 text-sm hover:text-blue-500">
+          <p className="mt-3 text-gray-300 text-sm hover:text-blue-500 transition cursor-pointer">
             +91 6358900891
           </p>
 
-          <p className="text-gray-300 text-sm hover:text-blue-500">
-            sourabhcorpporation@yahoo.com
+          <p className="text-gray-300 text-sm hover:text-blue-500 transition cursor-pointer">
+            saurabhcorporation@yahoo.com
           </p>
         </div>
-
       </div>
 
       {/* Bottom Strip */}
