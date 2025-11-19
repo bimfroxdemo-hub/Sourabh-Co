@@ -8,6 +8,8 @@ import {
   FiTruck,
 } from "react-icons/fi";
 
+import { motion } from "framer-motion";
+
 const WhyChooseUs = () => {
   const list = [
     {
@@ -28,12 +30,12 @@ const WhyChooseUs = () => {
     {
       icon: <FiShield className="text-blue-600 text-5xl mx-auto" />,
       title: "Trusted & Reliable",
-      desc: "Hundblues of successful projects and repeat clients.",
+      desc: "Hundreds of successful projects and repeat clients.",
     },
     {
       icon: <FiTool className="text-blue-600 text-5xl mx-auto" />,
       title: "All-in-One Service",
-      desc: "Construction, labour, HVAC, insulation & fabrication — everything in one place.",
+      desc: "Construction, labour, HVAC, insulation & fabrication — all in one place.",
     },
     {
       icon: <FiTruck className="text-blue-600 text-5xl mx-auto" />,
@@ -43,15 +45,13 @@ const WhyChooseUs = () => {
   ];
 
   return (
-<section
-  className="py-5"
-  style={{
-    background:
-      "linear-gradient(360deg, #ffffff 0%, #d7eaff 40%, #a6cff5 100%, #7bb6ee 100%)",
-  }}
->
-
-
+    <section
+      className="py-12"
+      style={{
+        background:
+          "linear-gradient(360deg, #ffffff 0%, #d7eaff 40%, #a6cff5 100%, #7bb6ee 100%)",
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4">
 
         {/* Heading */}
@@ -64,16 +64,35 @@ const WhyChooseUs = () => {
 
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {list.map((item, i) => (
-            <div
-              key={i}
-              className="bg-white p-8 rounded-xl shadow hover:shadow-xl border hover:border-blue-500 transition-all duration-300 text-center"
-            >
-              {item.icon}
-              <h3 className="text-xl font-bold mt-4 mb-2">{item.title}</h3>
-              <p className="text-gray-600 text-sm">{item.desc}</p>
-            </div>
-          ))}
+          {list.map((item, i) => {
+            const fromLeft = {
+              hidden: { opacity: 0, x: -80 },
+              visible: { opacity: 1, x: 0 },
+            };
+
+            const fromRight = {
+              hidden: { opacity: 0, x: 80 },
+              visible: { opacity: 1, x: 0 },
+            };
+
+            return (
+              <motion.div
+                key={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                variants={i % 2 === 0 ? fromLeft : fromRight}
+                className="bg-white p-8 rounded-xl shadow hover:shadow-xl
+                           border hover:border-blue-500 transition-all duration-300 
+                           text-center"
+              >
+                {item.icon}
+                <h3 className="text-xl font-bold mt-4 mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm">{item.desc}</p>
+              </motion.div>
+            );
+          })}
         </div>
 
       </div>
