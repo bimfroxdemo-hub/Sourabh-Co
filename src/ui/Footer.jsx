@@ -23,12 +23,12 @@ const Footer = () => {
             industrial services.
           </p>
 
-          <div className="flex gap-4 mt-4 text-xl">
+          {/* <div className="flex gap-4 mt-4 text-xl">
             <FiFacebook className="hover:text-blue-500 cursor-pointer" />
             <FiTwitter className="hover:text-blue-500 cursor-pointer" />
             <FiInstagram className="hover:text-blue-500 cursor-pointer" />
             <FiLinkedin className="hover:text-blue-500 cursor-pointer" />
-          </div>
+          </div> */}
         </div>
 
         {/* QUICK LINKS */}
@@ -85,11 +85,11 @@ const Footer = () => {
           </p>
 
           <p className="mt-3 text-gray-300 text-sm hover:text-blue-500">
-            +91 63589 00891
+            +91 6358900891
           </p>
 
           <p className="text-gray-300 text-sm hover:text-blue-500">
-            info@Saurabhcorp.com
+            sourabhcorpporation@yahoo.com
           </p>
         </div>
 
