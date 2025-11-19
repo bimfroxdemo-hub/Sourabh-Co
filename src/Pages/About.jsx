@@ -12,7 +12,13 @@ import {
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-white pt-28 px-4 pb-20">
+    <div
+      className="min-h-screen pt-28 px-4 pb-20"
+      style={{
+        background:
+          "linear-gradient(180deg, #ffffff 0%, #cfe9f9 30%, #91c8f0 100%, #62b2e6 100%)",
+      }}
+    >
       <div className="max-w-5xl mx-auto">
 
         {/* HEADING */}
@@ -29,25 +35,25 @@ const About = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="text-gray-600 text-lg text-center max-w-2xl mx-auto mb-12"
+          className="text-gray-700 text-lg text-center max-w-2xl mx-auto mb-12"
         >
           Trusted partner for construction materials, skilled labour, HVAC
           fabrication & full contracting services.
         </motion.p>
 
         {/* MAIN ABOUT PARAGRAPH */}
-        <div className="space-y-8 text-lg text-gray-700 leading-relaxed">
+        <div className="space-y-8 text-lg text-gray-800 leading-relaxed">
 
           <p>
-            Sourabh Corporation is a one-stop solution for premium construction
+            Saurabh Corporation is a one-stop solution for premium construction
             materials, verified manpower, fabrication, HVAC works, industrial
             pipeline setup, insulation services, waterproofing, painting,
             structural steel fabrication, commercial interiors and full turnkey
             project execution.  
             <br /><br />
             With a mission to simplify project management for contractors,
-            industries and commercial clients, we bring **quality, reliability
-            and timely delivery** under one trusted brand. Our team ensures
+            industries and commercial clients, we bring <strong>quality, reliability
+            and timely delivery</strong> under one trusted brand. Our team ensures
             strict supervision, professional service and transparent work
             ethics—helping clients save time, cost and effort.
           </p>
@@ -90,7 +96,7 @@ const About = () => {
                 whileHover={{ scale: 1.05 }}
                 className="bg-white/70 border rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition"
               >
-                <FaTasks className="w-12 h-12 mx-auto text-red-600 mb-3" />
+                <FaTasks className="w-12 h-12 mx-auto text-blue-600 mb-3" />
                 <h3 className="text-3xl font-bold">110+</h3>
                 <p className="text-gray-600 text-sm mt-1">Projects Completed</p>
               </motion.div>
@@ -119,7 +125,7 @@ const About = () => {
           </motion.div>
 
           {/* MISSION */}
-          <div className="bg-gray-100 p-6 rounded-xl border">
+          <div className="p-6">
             <h2 className="text-2xl font-bold mb-2">Our Mission</h2>
             <p>
               To provide all construction materials and manpower under one
@@ -140,8 +146,8 @@ const About = () => {
           </div>
 
           {/* ADDITIONAL INFO */}
-          <div className="bg-white border rounded-2xl p-6 shadow-sm mt-8">
-            <h2 className="text-2xl font-bold mb-3">Why Choose Sourabh Corporation?</h2>
+          <div className="p-6 mt-8">
+            <h2 className="text-2xl font-bold mb-3">Why Choose Saurabh Corporation?</h2>
             <p className="leading-relaxed">
               With over a decade of hands-on industry experience, we focus on
               combining strong manpower, premium materials and modern work

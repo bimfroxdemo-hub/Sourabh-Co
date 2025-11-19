@@ -88,7 +88,7 @@ const Service = () => {
       className="min-h-screen pt-28 px-4 pb-20"
 style={{
   background:
-    "linear-gradient(180deg, #ffffff 0%, #cfe9f9 30%, #91c8f0 80%, #62b2e6 100%)",
+    "linear-gradient(180deg, #ffffff 0%, #cfe9f9 30%, #91c8f0 100%, #62b2e6 100%)",
 }}
     >
       <div className="max-w-7xl mx-auto">

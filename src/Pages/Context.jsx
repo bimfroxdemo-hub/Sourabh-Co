@@ -38,7 +38,7 @@ const Context = () => {
 
             <div>
               <h4 className="font-semibold">Email</h4>
-              <p className="text-gray-600">info@sourabhcorp.com</p>
+              <p className="text-gray-600">info@saurabhcorp.com</p>
             </div>
 
             <div>

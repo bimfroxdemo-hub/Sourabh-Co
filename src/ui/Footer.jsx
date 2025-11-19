@@ -17,7 +17,7 @@ const Footer = () => {
         
         {/* ABOUT */}
         <div className="col-span-2 md:col-span-1">
-          <h2 className="font-bold text-lg mb-3 text-white">Sourabh Corporation</h2>
+          <h2 className="font-bold text-lg mb-3 text-white">Saurabh Corporation</h2>
           <p className="text-gray-300 text-sm">
             Your trusted partner for construction materials, labour supply &
             industrial services.
@@ -89,7 +89,7 @@ const Footer = () => {
           </p>
 
           <p className="text-gray-300 text-sm hover:text-blue-500">
-            info@sourabhcorp.com
+            info@Saurabhcorp.com
           </p>
         </div>
 
@@ -97,7 +97,7 @@ const Footer = () => {
 
       {/* Bottom Strip */}
       <div className="text-center py-4 border-t border-gray-700 text-gray-400 text-sm">
-        © {new Date().getFullYear()} Sourabh Corporation — All Rights Reserved.
+        © {new Date().getFullYear()} Saurabh Corporation — All Rights Reserved.
       </div>
     </footer>
   );

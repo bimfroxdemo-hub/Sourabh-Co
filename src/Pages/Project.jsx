@@ -8,7 +8,7 @@ const Project = () => {
       className="min-h-screen pt-24 px-4 pb-20 text-black"
       style={{
         background:
-          "linear-gradient(180deg, #ffffff 0%, #cfe9f9 30%, #91c8f0 80%, #62b2e6 100%)",
+          "linear-gradient(180deg, #ffffff 0%, #cfe9f9 30%, #91c8f0 100%, #62b2e6 100%)",
       }}
     >
       <div className="max-w-6xl mx-auto text-center">
@@ -36,7 +36,7 @@ const Project = () => {
           </p>
 
           <p className="flex items-center justify-center gap-2 mt-2 text-gray-800">
-            <FiMail className="text-blue-600" /> info@sourabhcorp.com
+            <FiMail className="text-blue-600" /> info@saurabhcorp.com
           </p>
         </div>
 
