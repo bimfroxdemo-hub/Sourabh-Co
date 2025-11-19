@@ -3,20 +3,28 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-white pt-24 px-4 pb-20">
+    <div className="min-h-screen bg-white pt-28 px-4 pb-20">
       <div className="max-w-5xl mx-auto">
 
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-5xl font-bold text-center mb-6"
-        >
-          About Sourabh Corporation
-        </motion.h1>
+       <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                className="text-4xl md:text-5xl font-bold text-center mb-4"
+              >
+                About us
+              </motion.h1>
 
-        <p className="text-gray-600 text-lg text-center max-w-2xl mx-auto mb-10">
+   <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          className="text-gray-600 text-lg text-center max-w-2xl mx-auto mb-12"
+        >
           Trusted partner for construction materials, skilled labour, HVAC fabrication & full contracting services.
-        </p>
+        </motion.p>
+
+        
 
         <div className="space-y-8 text-lg text-gray-700 leading-relaxed">
 
