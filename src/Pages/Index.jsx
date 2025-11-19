@@ -1,12 +1,13 @@
 import React from "react";
 import Header from "../ui/Header";
-import Footer from "../ui/Footer";
+
 
 import HeroSection from "../Home/HeroSection";
 import Categery from "../Home/Catogery";
 import WhyChooseUs from "../Home/WhyChooseUs";
 import CTASection from "../Home/CTASection";
 import Exprience from "./Exprience"; // (Your file name is Exprience, so kept the same)
+import Industries from "./Industries";
 
 const Index = () => {
   return (
@@ -30,7 +31,11 @@ const Index = () => {
         <section className="w-full">
           <Categery />
         </section>
-
+      
+       
+        <section className="w-full">
+          <Industries />
+        </section>
         <section className="w-full">
           <Exprience />
         </section>
