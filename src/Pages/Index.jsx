@@ -20,21 +20,21 @@ const Index = () => {
           <HeroSection />
         </section>
 
-        <section className="w-full  sm:px-6 md:px-10 lg:px-14 xl:px-16 ">
+        <section className="w-full    ">
           <Categery />
         </section>
 
-        <section className="w-full  sm:px-6 md:px-10 lg:px-14 xl:px-16 ">
+        <section className="w-full    ">
           <WhyChooseUs />
         </section>
 
-        <section className="w-full  sm:px-6 md:px-10 lg:px-14 xl:px-16 ">
+        <section className="w-full   ">
           <CTASection />
         </section>
       </main>
 
       {/* Footer */}
-      <Footer />
+      
     </div>
   );
 };
