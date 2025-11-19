@@ -1,14 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import Exprience from "./Exprience";
 /* IMPORT ICONS */
-import {
-  FaUsers,
-  FaTasks,
-  FaUserTie,
-  FaHardHat,
-  FaBriefcase,
-} from "react-icons/fa";
+
 
 const About = () => {
   return (
@@ -59,71 +53,11 @@ const About = () => {
           </p>
 
           {/* EXPERIENCE SECTION */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mt-16"
-          >
-            <h2 className="text-3xl font-bold text-center mb-8">
-              Our Experience
-            </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
 
-              {/* 13+ Years */}
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="bg-white/70 border rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition"
-              >
-                <FaBriefcase className="w-12 h-12 mx-auto text-blue-600 mb-3" />
-                <h3 className="text-3xl font-bold">13+</h3>
-                <p className="text-gray-600 text-sm mt-1">Years Experience</p>
-              </motion.div>
+              <Exprience />
 
-              {/* 150+ Clients */}
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="bg-white/70 border rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition"
-              >
-                <FaUsers className="w-12 h-12 mx-auto text-green-600 mb-3" />
-                <h3 className="text-3xl font-bold">150+</h3>
-                <p className="text-gray-600 text-sm mt-1">Happy Clients</p>
-              </motion.div>
-
-              {/* 110+ Projects */}
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="bg-white/70 border rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition"
-              >
-                <FaTasks className="w-12 h-12 mx-auto text-blue-600 mb-3" />
-                <h3 className="text-3xl font-bold">110+</h3>
-                <p className="text-gray-600 text-sm mt-1">Projects Completed</p>
-              </motion.div>
-
-              {/* 25 Labour */}
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="bg-white/70 border rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition"
-              >
-                <FaHardHat className="w-12 h-12 mx-auto text-yellow-600 mb-3" />
-                <h3 className="text-3xl font-bold">25</h3>
-                <p className="text-gray-600 text-sm mt-1">Skilled Labour</p>
-              </motion.div>
-
-              {/* 4 Engineers */}
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="bg-white/70 border rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition"
-              >
-                <FaUserTie className="w-12 h-12 mx-auto text-purple-600 mb-3" />
-                <h3 className="text-3xl font-bold">4</h3>
-                <p className="text-gray-600 text-sm mt-1">Certified Engineers</p>
-              </motion.div>
-
-            </div>
-          </motion.div>
-
+          
           {/* MISSION */}
           <div className="p-6">
             <h2 className="text-2xl font-bold mb-2">Our Mission</h2>
