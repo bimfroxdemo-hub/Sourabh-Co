@@ -45,8 +45,7 @@ const Index = () => {
 
       </main>
 
-      {/* Footer */}
-      <Footer />
+   
     </div>
   );
 };
