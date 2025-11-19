@@ -13,7 +13,7 @@ const About = () => {
           "linear-gradient(180deg, #ffffff 0%, #cfe9f9 30%, #91c8f0 100%, #62b2e6 100%)",
       }}
     >
-      <div className="max-w-5xl mx-auto">
+      <div className="py-16  mx-auto">
 
         {/* HEADING */}
         <motion.h1

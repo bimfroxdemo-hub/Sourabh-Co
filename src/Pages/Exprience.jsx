@@ -10,9 +10,7 @@ import {
 
 const Experience = () => {
   return (
-    <section
-      className="py-13  bg-transparent"
-    >
+    <section className="py-13 bg-transparent w-full">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -25,14 +23,13 @@ const Experience = () => {
           Our Experience
         </h2>
 
-        {/* Stats Grid - FULL WIDTH */}
+        {/* Stats Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 w-full">
 
           {/* Years Experience */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="backdrop-blur-md bg-white/20 border border-white/40 
-                       rounded-2xl p-6 text-center shadow-sm 
+            className="bg-white border rounded-2xl p-6 text-center shadow-sm 
                        hover:shadow-xl transition"
           >
             <FaBriefcase className="w-12 h-12 mx-auto text-blue-600 mb-3" />
@@ -43,8 +40,7 @@ const Experience = () => {
           {/* Happy Clients */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="backdrop-blur-md bg-white/20 border border-white/40 
-                       rounded-2xl p-6 text-center shadow-sm 
+            className="bg-white border rounded-2xl p-6 text-center shadow-sm 
                        hover:shadow-xl transition"
           >
             <FaUsers className="w-12 h-12 mx-auto text-green-600 mb-3" />
@@ -55,8 +51,7 @@ const Experience = () => {
           {/* Projects Completed */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="backdrop-blur-md bg-white/20 border border-white/40 
-                       rounded-2xl p-6 text-center shadow-sm 
+            className="bg-white border rounded-2xl p-6 text-center shadow-sm 
                        hover:shadow-xl transition"
           >
             <FaTasks className="w-12 h-12 mx-auto text-blue-600 mb-3" />
@@ -67,8 +62,7 @@ const Experience = () => {
           {/* Skilled Labour */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="backdrop-blur-md bg-white/20 border border-white/40 
-                       rounded-2xl p-6 text-center shadow-sm 
+            className="bg-white border rounded-2xl p-6 text-center shadow-sm 
                        hover:shadow-xl transition"
           >
             <FaHardHat className="w-12 h-12 mx-auto text-yellow-600 mb-3" />
@@ -79,8 +73,7 @@ const Experience = () => {
           {/* Certified Engineers */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="backdrop-blur-md bg-white/20 border border-white/40 
-                       rounded-2xl p-6 text-center shadow-sm 
+            className="bg-white border rounded-2xl p-6 text-center shadow-sm 
                        hover:shadow-xl transition"
           >
             <FaUserTie className="w-12 h-12 mx-auto text-purple-600 mb-3" />
