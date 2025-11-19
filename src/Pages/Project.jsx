@@ -40,17 +40,71 @@ const projectData = [
   },
 ];
 
+// ---------------------------------------------
+// SEPARATE CARD COMPONENT (Fixes useState issue)
+// ---------------------------------------------
+const ProjectCard = ({ p }) => {
+  const [isActive, setIsActive] = useState(false);
+
+  return (
+    <motion.div
+      whileHover={{ scale: 1.04 }}
+      transition={{ type: "spring", stiffness: 200 }}
+      onClick={() => setIsActive(!isActive)}
+      className="relative bg-white rounded-2xl shadow-lg overflow-hidden 
+                 border cursor-pointer hover:shadow-2xl group"
+    >
+      {/* Glow Effect */}
+      <div
+        className="absolute bottom-0 left-0 w-full h-1/3 bg-blue-400 opacity-0 
+        group-hover:opacity-40 blur-xl transition-all duration-300 pointer-events-none"
+      />
+
+      {/* Image + Overlay */}
+      <div className="relative h-72 overflow-hidden">
+        <img
+          src={p.img}
+          alt={p.title}
+          className="w-full h-full object-cover"
+        />
+
+        {/* Overlay */}
+        <motion.div
+          animate={{
+            y: isActive ? 0 : 90,
+            opacity: isActive ? 1 : 0,
+          }}
+          className="absolute bottom-0 left-0 w-full bg-black/60 text-white 
+                     py-4 px-4 font-semibold text-sm transition-all duration-300
+                     translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
+        >
+          <p className="text-base font-bold">{p.title}</p>
+          <p className="text-blue-400 text-xs mt-1">{p.tag}</p>
+        </motion.div>
+      </div>
+
+      {/* Content */}
+      <div className="p-5">
+        <h3 className="text-xl font-bold mb-2">{p.title}</h3>
+        <p className="text-gray-700 text-sm leading-relaxed">{p.desc}</p>
+      </div>
+    </motion.div>
+  );
+};
+
+// ---------------------------------------------
+// MAIN PROJECT COMPONENT
+// ---------------------------------------------
 const Project = () => {
   return (
     <div
       className="min-h-screen pt-28 px-4 pb-20 font-poppins"
       style={{
         background:
-          "linear-gradient(180deg, #ffffff 0%, #cfe9f9 30%, #91c8f0 80%, #62b2e6 100%)",
+          "linear-gradient(180deg, #ffffff 0%, #cfe9f9 30%, #91c8f0 100%, #62b2e6 100%)",
       }}
     >
       <div className="max-w-6xl mx-auto">
-
         {/* Title */}
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
           Our Projects
@@ -59,63 +113,11 @@ const Project = () => {
           A glimpse of our completed fabrication, HVAC, interior and construction projects.
         </p>
 
-        {/* GRID */}
+        {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-
-          {projectData.map((p, index) => {
-            const [isActive, setIsActive] = useState(false);
-
-            return (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.04 }}
-                transition={{ type: "spring", stiffness: 200 }}
-                onClick={() => setIsActive(!isActive)}
-                className="relative bg-white rounded-2xl shadow-lg overflow-hidden 
-                           border cursor-pointer hover:shadow-2xl group"
-              >
-                {/* Glow Effect */}
-                <div
-                  className="absolute bottom-0 left-0 w-full h-1/3 bg-blue-400 opacity-0 
-                  group-hover:opacity-40 blur-xl transition-all duration-300 pointer-events-none"
-                />
-
-                {/* IMAGE + Overlay */}
-                <div className="relative h-72 overflow-hidden">
-                  <img
-                    src={p.img}
-                    alt={p.title}
-                    className="w-full h-full object-cover"
-                  />
-
-                  {/* Overlay */}
-                  <motion.div
-                    animate={{
-                      y: isActive ? 0 : 90,
-                      opacity: isActive ? 1 : 0,
-                    }}
-                    className="absolute bottom-0 left-0 w-full bg-black/60 text-white 
-                               py-4 px-4 font-semibold text-sm transition-all duration-300
-                               translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
-                  >
-                    <p className="text-base font-bold">{p.title}</p>
-                    <p className="text-blue-400 text-xs mt-1">{p.tag}</p>
-                  </motion.div>
-                </div>
-
-                {/* CARD CONTENT */}
-                <div className="p-5">
-                  <h3 className="text-xl font-bold mb-2">{p.title}</h3>
-
-                  <p className="text-gray-700 text-sm leading-relaxed">
-                    {p.desc}
-                  </p>
-                </div>
-
-              </motion.div>
-            );
-          })}
-
+          {projectData.map((p, index) => (
+            <ProjectCard key={index} p={p} />
+          ))}
         </div>
       </div>
     </div>

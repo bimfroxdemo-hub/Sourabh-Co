@@ -27,7 +27,7 @@ const Header = () => {
             SC
           </div>
           <span className="text-lg md:text-xl font-bold whitespace-nowrap">
-            Sourabh Corporation
+            Saurabh Corporation
           </span>
         </Link>
 
