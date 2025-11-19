@@ -13,9 +13,14 @@ import {
 const Catogery = () => {
   const categories = [
     {
-      icon: <FiHome className="text-red-600 text-5xl mx-auto" />,
-      title: "Construction",
-      desc: "Complete home & building construction.",
+      icon: <FiCpu className="text-red-600 text-5xl mx-auto" />,
+      title: "Pipeline & Fabrication",
+      desc: "Pipeline, welding & structural fabrication.",
+    },
+    {
+      icon: <FiLayers className="text-red-600 text-5xl mx-auto" />,
+      title: "Thermal Insulation",
+      desc: "Hot & cold insulation works for industries.",
     },
     {
       icon: <FiWind className="text-red-600 text-5xl mx-auto" />,
@@ -26,16 +31,6 @@ const Catogery = () => {
       icon: <FiTool className="text-red-600 text-5xl mx-auto" />,
       title: "Labour & Contracting",
       desc: "Skilled labour with supervision.",
-    },
-    {
-      icon: <FiLayers className="text-red-600 text-5xl mx-auto" />,
-      title: "Thermal Insulation",
-      desc: "Hot & cold insulation works for industries.",
-    },
-    {
-      icon: <FiCpu className="text-red-600 text-5xl mx-auto" />,
-      title: "Pipeline & Fabrication",
-      desc: "Pipeline, welding & structural fabrication.",
     },
     {
       icon: <FiUsers className="text-red-600 text-5xl mx-auto" />,
