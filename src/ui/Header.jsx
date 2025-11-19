@@ -23,7 +23,7 @@ const Header = () => {
 
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
-          <div className="h-10 w-10 bg-red-600 text-white rounded-md flex items-center justify-center font-bold text-xl">
+          <div className="h-10 w-10 bg-blue-600 text-white rounded-md flex items-center justify-center font-bold text-xl">
             SC
           </div>
           <span className="text-lg md:text-xl font-bold whitespace-nowrap">
@@ -37,7 +37,7 @@ const Header = () => {
             <Link
               key={item.to}
               to={item.to}
-              className="hover:text-red-600 transition font-medium"
+              className="hover:text-blue-600 transition font-medium"
             >
               {item.label}
             </Link>

@@ -58,7 +58,7 @@ const HeroSection = () => {
             className="text-4xl md:text-6xl text-white font-bold mb-6 leading-tight"
           >
             One-Stop Solution for{" "}
-            <span className="text-red-500">Construction & Labour</span>
+            <span className="text-blue-500">Construction & Labour</span>
           </motion.h1>
 
           <motion.p
@@ -72,7 +72,7 @@ const HeroSection = () => {
 
           <Link
             to="/contact"
-            className="inline-block bg-red-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-red-700 transition"
+            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700 transition"
           >
             Get Instant Quote
           </Link>
