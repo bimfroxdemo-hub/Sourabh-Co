@@ -22,7 +22,7 @@ const Context = () => {
 
     const { name, email, phone, message } = form;
 
-    const whatsappNumber = "919876543210";
+    const whatsappNumber = "916358900891";
 
     const text = `New enquiry for Sourabh Corporation
     
@@ -50,7 +50,6 @@ ${message}`;
       }}
     >
       <div className="max-w-6xl mx-auto space-y-10">
-        
         {/* MAIN CARD */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -58,7 +57,6 @@ ${message}`;
           className="bg-white/80 backdrop-blur-xl border border-slate-100 rounded-3xl shadow-xl p-6 md:p-10"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
-
             {/* LEFT SIDE */}
             <div className="space-y-6">
               <div>
@@ -91,7 +89,7 @@ ${message}`;
                   <div>
                     <p className="text-xs text-slate-500 font-semibold">Email</p>
                     <p className="text-sm font-medium text-slate-900">
-                      info@saurabhcorp.com
+                      sourabhcorporation@yahoo.com
                     </p>
                   </div>
                 </div>
@@ -109,38 +107,34 @@ ${message}`;
                 </div>
               </div>
 
-              {/* OFFICES */}
+              {/* HEAD OFFICE ONLY */}
               <div className="mt-2 rounded-2xl border border-dashed border-blue-200 bg-blue-50/40 px-4 py-4 space-y-2">
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-700">
-                  Offices
+                  Head Office
                 </p>
 
                 <div>
                   <p className="text-sm font-semibold text-slate-900">
-                    Gujarat (Head Office)
+                    Gujarat
                   </p>
                   <p className="text-sm text-slate-700 leading-5">
                     Mangaldeep, Rajpipla Road,
                     <br />
                     Ankleshwar, Bharuch 393001
+                    <br />
+                    Gujarat, India
                   </p>
                 </div>
+              </div>
 
-                <div className="pt-2">
-                  <p className="text-sm font-semibold text-slate-900">
-                    Mumbai Office
-                  </p>
-                  <p className="text-sm text-slate-700">Mumbai, Maharashtra</p>
-                </div>
-
-                <div className="pt-2">
-                  <p className="text-sm font-semibold text-slate-900">
-                    Faizabaad Office
-                  </p>
-                  <p className="text-sm text-slate-700">
-                    Faizabaad, Uttar Pradesh
-                  </p>
-                </div>
+              {/* OTHER CITIES */}
+              <div className="rounded-2xl border border-slate-100 bg-white/70 px-4 py-3">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 mb-1">
+                  We’re also available in these cities
+                </p>
+                <p className="text-sm text-slate-800">
+                  Mumbai, Maharashtra &nbsp;·&nbsp; Faizabaad, Uttar Pradesh
+                </p>
               </div>
             </div>
 
@@ -231,7 +225,7 @@ ${message}`;
                 className="w-full bg-green-600 text-white py-3 rounded-xl text-sm font-semibold shadow-md hover:bg-green-700 active:scale-[0.99] transition inline-flex items-center justify-center gap-2"
               >
                 <BsWhatsapp className="text-lg" />
-                Send Directly on WhatsApp
+                Send Message
               </button>
             </motion.form>
           </div>
