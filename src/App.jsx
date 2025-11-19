@@ -9,11 +9,11 @@ import Footer from "./ui/Footer";
 import Index from "./Pages";
 import About from "./Pages/About";
 import Service from "./Pages/Service";
-import Product from "./Pages/Product";
+
 import Project from "./Pages/Project";
-import HireLabour from "./Pages/HireLAbour";
+
 import Contact from "./Pages/Context";
-import Quote from "./Pages/Qutoe";
+
 
 /* Simple scroll-to-top on route change (optional improvement) */
 import { useEffect } from "react";
@@ -38,9 +38,9 @@ const App = () => {
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/Service" element={<Service />} />
-          <Route path="/product" element={<Product />} />
+          
           <Route path="/project" element={<Project />} />
-          <Route path="/hirelabour" element={<HireLabour />} />
+
           <Route path="/contact" element={<Context />} />
         
           {/* 404 fallback */}
