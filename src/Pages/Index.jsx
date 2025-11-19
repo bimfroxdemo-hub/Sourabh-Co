@@ -10,16 +10,31 @@ import CTASection from "../Home/CTASection";
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      
+      {/* Header */}
       <Header />
 
-      <main className="flex-1">
-        <HeroSection />
-        <Categery />
-        <WhyChooseUs />
-        <CTASection />
+      {/* Main Content */}
+      <main className="flex-1 w-full overflow-hidden">
+        <section className="w-full">
+          <HeroSection />
+        </section>
+
+        <section className="w-full  sm:px-6 md:px-10 lg:px-14 xl:px-16 ">
+          <Categery />
+        </section>
+
+        <section className="w-full  sm:px-6 md:px-10 lg:px-14 xl:px-16 ">
+          <WhyChooseUs />
+        </section>
+
+        <section className="w-full  sm:px-6 md:px-10 lg:px-14 xl:px-16 ">
+          <CTASection />
+        </section>
       </main>
 
-     
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
