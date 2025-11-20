@@ -79,7 +79,7 @@ ${message}`;
                   <div>
                     <p className="text-xs text-slate-500 font-semibold">Call</p>
                     <p className="text-sm font-medium text-slate-900">
-                      +91 98765 43210
+                      +91 6358900891
                     </p>
                   </div>
                 </div>

@@ -36,9 +36,16 @@ const Index = () => {
         <section className="w-full">
           <Industries />
         </section>
-        <section className="w-full">
+        <section
+          className="w-full"
+          style={{
+          background:
+            "linear-gradient(180deg, #ffffff 0%, #d7eaff 40%, #a6cff5 100%, #7bb6ee 100%)",
+            }}
+          >
           <Exprience />
         </section>
+
 
         <section className="w-full">
           <WhyChooseUs />

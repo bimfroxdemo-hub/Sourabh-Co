@@ -7,7 +7,7 @@ import {
   FiLinkedin,
 } from "react-icons/fi";
 
-import logo from "../assets/logo.png"; // FIXED LOGO IMPORT
+import logo from "../assets/logo.png"; 
 
 const Footer = () => {
   return (
@@ -31,12 +31,12 @@ const Footer = () => {
           </p>
 
           {/* Social Icons */}
-          <div className="flex gap-4 mt-5 text-xl">
+          {/* <div className="flex gap-4 mt-5 text-xl">
             <FiFacebook className="hover:text-blue-500 cursor-pointer transition" />
             <FiTwitter className="hover:text-blue-500 cursor-pointer transition" />
             <FiInstagram className="hover:text-pink-500 cursor-pointer transition" />
             <FiLinkedin className="hover:text-blue-500 cursor-pointer transition" />
-          </div>
+          </div> */}
         </div>
 
         {/* QUICK LINKS */}
@@ -44,22 +44,27 @@ const Footer = () => {
           <h3 className="font-bold mb-4 text-white">Quick Links</h3>
           <ul className="space-y-2 text-sm">
             <li>
+              <Link to="/" className="text-gray-300 hover:text-blue-500">
+                Home
+              </Link>
+            </li>
+            <li>
               <Link to="/about" className="text-gray-300 hover:text-blue-500">
                 About Us
               </Link>
             </li>
             <li>
-              <Link to="/services" className="text-gray-300 hover:text-blue-500">
-                Our Services
+              <Link to="/service" className="text-gray-300 hover:text-blue-500">
+                Services
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/products" className="text-gray-300 hover:text-blue-500">
                 Products
               </Link>
-            </li>
+            </li> */}
             <li>
-              <Link to="/projects" className="text-gray-300 hover:text-blue-500">
+              <Link to="/project" className="text-gray-300 hover:text-blue-500">
                 Projects
               </Link>
             </li>
@@ -105,7 +110,7 @@ const Footer = () => {
 
       {/* Bottom Strip */}
       <div className="text-center py-4 border-t border-gray-700 text-gray-400 text-sm">
-        © {new Date().getFullYear()} Saurabh Corporation — All Rights Reserved.
+        © {new Date().getFullYear()} Saurabh Corporation — All Rights Reserved. Made by <a href="https://www.bimfrox.com/" className="text-green-300">BIMFROX</a>
       </div>
     </footer>
   );

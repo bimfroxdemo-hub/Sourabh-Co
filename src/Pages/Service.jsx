@@ -96,7 +96,7 @@ style={{
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-4xl md:text-5xl font-bold text-center mb-4 text-slate-800"
+          className="text-3xl md:text-4xl text-center mb-4 text-slate-800 font-peckham"
         >
           Our Services
         </motion.h1>

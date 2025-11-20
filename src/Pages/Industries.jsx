@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import a1 from "../assets/a1.png";
 import a2 from "../assets/a2.png";
 import a3 from "../assets/a3.png";
-import a4 from "../assets/a4.png";
-import a5 from "../assets/a5.png";
+import a4 from "../assets/family.png";
+import a5 from "../assets/quality.png";
 
 const Industries = () => {
   const items = [
@@ -37,7 +37,7 @@ const Industries = () => {
   ];
 
   return (
-    <section className="py-16 bg-white font-[Familjen_Grotesk]">
+    <section className="py-2 bg-white font-[Familjen_Grotesk]">
 
       {/* Heading */}
       <motion.h2
@@ -45,9 +45,9 @@ const Industries = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-6xl font-bold text-center mb-10 "
+        className="text-3xl text-center mb-10 font-peckham"
       >
-        Industries
+        Driven by Excellence
       </motion.h2>
 
       {/* Grid */}

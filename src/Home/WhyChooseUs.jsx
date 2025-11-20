@@ -46,7 +46,7 @@ const WhyChooseUs = () => {
 
   return (
     <section
-      className="py-12"
+      className="py-6"
       style={{
         background:
           "linear-gradient(360deg, #ffffff 0%, #d7eaff 40%, #a6cff5 100%, #7bb6ee 100%)",
@@ -55,7 +55,7 @@ const WhyChooseUs = () => {
       <div className="max-w-7xl mx-auto px-4">
 
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-center mb-4">
+        <h2 className="text-2xl lg:text-3xl text-center mb-4 font-peckham">
           Why Choose Us?
         </h2>
         <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">

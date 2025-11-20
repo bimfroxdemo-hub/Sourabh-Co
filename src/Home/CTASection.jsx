@@ -18,7 +18,7 @@ const CTASection = () => {
         initial={{ x: -50, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="text-3xl md:text-4xl font-bold mb-3"
+        className="text-xl md:text-3xl mb-3 font-peckham"
       >
         Need Skilled Labour or Materials?
       </motion.h2>
@@ -47,7 +47,7 @@ const CTASection = () => {
           className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg text-lg font-semibold w-full sm:w-auto justify-center shadow"
         >
           <FaWhatsapp className="text-2xl" />
-          WhatsApp: 6358900891
+          WhatsApp
         </motion.a>
 
         {/* Call Button */}
@@ -59,7 +59,7 @@ const CTASection = () => {
           className="flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-200 w-full sm:w-auto justify-center shadow"
         >
           <FiPhoneCall className="text-2xl" />
-          Call: 6358900891
+          Call
         </motion.a>
 
       </div>

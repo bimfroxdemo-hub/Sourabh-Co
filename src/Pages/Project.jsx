@@ -1,101 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
-import a1 from "../assets/a1.png";
-import a2 from "../assets/a2.png";
-import a3 from "../assets/a3.png";
-import a4 from "../assets/a4.png";
-import a5 from "../assets/a5.png";
-
-const projectData = [
-  {
-    img: a1,
-    title: "Industrial Warehouse Setup",
-    tag: "Steel Fabrication • Flooring • HVAC",
-    desc: "A complete turnkey warehouse project including steel fabrication and HVAC setup.",
-  },
-  {
-    img: a2,
-    title: "Commercial Interior Work",
-    tag: "Premium Design • Painting • Electrical",
-    desc: "Modern office interior setup with partitions, POP, lighting and painting.",
-  },
-  {
-    img: a3,
-    title: "HVAC Ducting Project",
-    tag: "Ducting • Insulation • Airflow Setup",
-    desc: "GI duct fabrication, insulation and industrial airflow setup.",
-  },
-  {
-    img: a4,
-    title: "Construction Material Supply",
-    tag: "Bulk Supply • On-Time Delivery",
-    desc: "Premium sand, bricks, cement, steel with fast delivery.",
-  },
-  {
-    img: a5,
-    title: "Manpower Contracting",
-    tag: "Skilled Labour • Industrial Support",
-    desc: "Trained labours, helpers, welders and civil workers.",
-  },
-];
-
-// ---------------------------------------------
-// SEPARATE CARD COMPONENT (Fixes useState issue)
-// ---------------------------------------------
-const ProjectCard = ({ p }) => {
-  const [isActive, setIsActive] = useState(false);
-
-  return (
-    <motion.div
-      whileHover={{ scale: 1.04 }}
-      transition={{ type: "spring", stiffness: 200 }}
-      onClick={() => setIsActive(!isActive)}
-      className="relative bg-white rounded-2xl shadow-lg overflow-hidden 
-                 border cursor-pointer hover:shadow-2xl group"
-    >
-      {/* Glow Effect */}
-      <div
-        className="absolute bottom-0 left-0 w-full h-1/3 bg-blue-400 opacity-0 
-        group-hover:opacity-40 blur-xl transition-all duration-300 pointer-events-none"
-      />
-
-      {/* Image + Overlay */}
-      <div className="relative h-72 overflow-hidden">
-        <img
-          src={p.img}
-          alt={p.title}
-          className="w-full h-full object-cover"
-        />
-
-        {/* Overlay */}
-        <motion.div
-          animate={{
-            y: isActive ? 0 : 90,
-            opacity: isActive ? 1 : 0,
-          }}
-          className="absolute bottom-0 left-0 w-full bg-black/60 text-white 
-                     py-4 px-4 font-semibold text-sm transition-all duration-300
-                     translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
-        >
-          <p className="text-base font-bold">{p.title}</p>
-          <p className="text-blue-400 text-xs mt-1">{p.tag}</p>
-        </motion.div>
-      </div>
-
-      {/* Content */}
-      <div className="p-5">
-        <h3 className="text-xl font-bold mb-2">{p.title}</h3>
-        <p className="text-gray-700 text-sm leading-relaxed">{p.desc}</p>
-      </div>
-    </motion.div>
-  );
-};
-
-// ---------------------------------------------
-// MAIN PROJECT COMPONENT
-// ---------------------------------------------
 const Project = () => {
+  const highlights = [
+    {
+      title: "Industrial Projects",
+      desc: "Pipeline, fabrication, HVAC ducting, insulation and heavy industrial execution with safety-first approach.",
+    },
+    {
+      title: "Commercial & Offices",
+      desc: "Modern interiors, partitions, ceilings, painting, electrical and complete site coordination.",
+    },
+    {
+      title: "Material & Manpower",
+      desc: "Bulk material supply and skilled labour teams for fabrication, insulation, civil and finishing works.",
+    },
+    {
+      title: "End-to-End Execution",
+      desc: "From BOQ and planning to final handover – one team responsible for quality, timeline and coordination.",
+    },
+  ];
+
   return (
     <div
       className="min-h-screen pt-28 px-4 pb-20 font-poppins"
@@ -104,21 +29,80 @@ const Project = () => {
           "linear-gradient(180deg, #ffffff 0%, #cfe9f9 30%, #91c8f0 100%, #62b2e6 100%)",
       }}
     >
-      <div className="max-w-6xl mx-auto">
-        {/* Title */}
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
-          Our Projects
-        </h1>
-        <p className="text-gray-700 text-center max-w-2xl mx-auto text-lg mb-12">
-          A glimpse of our completed fabrication, HVAC, interior and construction projects.
-        </p>
+      <div className="max-w-5xl mx-auto">
+        {/* HEADING */}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-2xl md:text-4xl font-peckham text-center mb-4"
+        >
+          Projects & Site Work
+        </motion.h1>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-          {projectData.map((p, index) => (
-            <ProjectCard key={index} p={p} />
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="text-gray-700 text-center max-w-2xl mx-auto text-lg mb-10"
+        >
+          We are currently updating this section with real-site photos, case
+          studies and completed project details.  
+          <span className="block mt-1 font-semibold">
+            Meanwhile, here is what we typically deliver on-site:
+          </span>
+        </motion.p>
+
+        {/* HIGHLIGHT CARDS */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          {highlights.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15 * i, duration: 0.5 }}
+              className="bg-white/90 rounded-2xl shadow-md border border-white/60 
+                         px-5 py-6 backdrop-blur-sm"
+            >
+              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                {item.desc}
+              </p>
+            </motion.div>
           ))}
         </div>
+
+        {/* CTA BOX */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+          className="bg-[#0f172a] text-white rounded-3xl px-6 py-8 md:px-10 md:py-10 
+                     shadow-2xl border border-white/10"
+        >
+          <h2 className="text-2xl md:text-3xl font-bold mb-3">
+            Have an upcoming project?
+          </h2>
+          <p className="text-sm md:text-base text-gray-200 mb-5 max-w-2xl">
+            Share your drawings, BOQ or basic requirement and we&apos;ll help you
+            with planning, labour support, material supply and full project
+            execution across HVAC, insulation, fabrication and construction work.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href="/contact"
+              className="inline-flex items-center justify-center px-5 py-2.5 rounded-full 
+                         text-sm md:text-base font-semibold bg-white text-[#0f172a] 
+                         shadow-lg hover:shadow-xl transition-all"
+            >
+              Discuss Your Project
+            </a>
+            <p className="text-xs md:text-sm text-gray-300">
+              Project photos & case studies will be live here very soon.
+            </p>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

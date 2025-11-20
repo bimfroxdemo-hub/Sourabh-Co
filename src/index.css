@@ -1,4 +1,13 @@
+@font-face {
+  font-family: peckham;
+  src: url("./assets/Fonts/PeckhamPress-Trial.otf");
+}
+
 @import "tailwindcss";
+
+@theme{
+  --font-peckham: peckham, "sans-serif";
+}
 
 /* =========================================
    Root Variables (Light Mode)
