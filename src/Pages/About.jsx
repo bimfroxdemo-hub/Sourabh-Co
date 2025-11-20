@@ -7,7 +7,7 @@ import heroImg from "../assets/about_hero.png";
 import founderImg from "../assets/company.png";
 import whyImg from "../assets/why_choose.png";
 import promiseImg from "../assets/promises.png";
-import teamImg from "../assets/team.png"; 
+import teamImg from "../assets/team.png";
 
 const About = () => {
   return (
@@ -25,23 +25,28 @@ const About = () => {
           <div className="relative z-10 max-w-6xl mx-auto h-full flex flex-col items-center justify-center px-4 text-center text-white">
             <motion.p
               initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.6 }}
               transition={{ duration: 0.5 }}
               className="tracking-[0.35em] text-md md:text-sm uppercase mb-3 font-peckham text-blue-400"
             >
               About Us
             </motion.p>
+
             <motion.h1
               initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.6 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-2xl md:text-4xl font-semibold"
             >
               A single partner for materials, labour & industrial solutions.
             </motion.h1>
+
             <motion.p
               initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.6 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mt-4 max-w-2xl text-sm md:text-base text-gray-100"
             >
@@ -55,8 +60,9 @@ const About = () => {
         {/* WE ARE SAURABH CORPORATION CARD */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           className="max-w-6xl mx-auto px-4 -mt-16 md:-mt-24 relative z-20"
         >
           <div className="bg-white shadow-xl rounded-sm overflow-hidden md:grid md:grid-cols-2 mt-7 lg:mt-1">
@@ -119,7 +125,8 @@ const About = () => {
         {/* Image side */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6 }}
           className="overflow-hidden rounded-sm shadow-md"
         >
@@ -133,7 +140,8 @@ const About = () => {
         {/* Text side */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
           <p className="uppercase tracking-[0.25em] text-3xl text-blue-400 mb-5 font-peckham">
@@ -188,18 +196,19 @@ const About = () => {
           </div>
         </motion.div>
       </section>
+
       {/* ================= MEET OUR TEAM ================ */}
       <section className="max-w-6xl mx-auto px-4 mt-20 md:mt-24 pb-12 md:pb-16">
         <div className="grid md:grid-cols-2 gap-8 items-center">
-
           {/* LEFT: TEXT */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.6 }}
             className="text-left"
           >
-           <p className="uppercase tracking-[0.25em] text-xl md:text-3xl text-blue-400 mb-3 font-peckham ">
+            <p className="uppercase tracking-[0.25em] text-xl md:text-3xl text-blue-400 mb-3 font-peckham">
               Meet Our Team
             </p>
             <h2 className="text-2xl md:text-3xl font-semibold">
@@ -223,19 +232,27 @@ const About = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm md:text-base text-gray-700">
               <div>
                 <h4 className="font-semibold mb-1">Project Planning</h4>
-                <p className="text-gray-600">BOQ, material planning & execution schedules.</p>
+                <p className="text-gray-600">
+                  BOQ, material planning & execution schedules.
+                </p>
               </div>
               <div>
                 <h4 className="font-semibold mb-1">Site Supervision</h4>
-                <p className="text-gray-600">Supervisors tracking quality & daily progress.</p>
+                <p className="text-gray-600">
+                  Supervisors tracking quality & daily progress.
+                </p>
               </div>
               <div>
                 <h4 className="font-semibold mb-1">Technical Support</h4>
-                <p className="text-gray-600">Support for HVAC, insulation & fabrication.</p>
+                <p className="text-gray-600">
+                  Support for HVAC, insulation & fabrication.
+                </p>
               </div>
               <div>
                 <h4 className="font-semibold mb-1">Labour Management</h4>
-                <p className="text-gray-600">Skilled labour for each activity.</p>
+                <p className="text-gray-600">
+                  Skilled labour for each activity.
+                </p>
               </div>
             </div>
           </motion.div>
@@ -243,7 +260,8 @@ const About = () => {
           {/* RIGHT: IMAGE */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.6 }}
             className="rounded-sm overflow-hidden shadow-md"
           >
@@ -253,19 +271,16 @@ const About = () => {
               className="w-full h-full object-cover"
             />
           </motion.div>
-
         </div>
       </section>
 
-
-
-            {/* ================= OUR PROMISE (SWAPPED) ================ */}
+      {/* ================= OUR PROMISE (SWAPPED) ================ */}
       <section className="max-w-6xl mx-auto px-4 mt-4 md:mt-6 mb-20 grid md:grid-cols-2 gap-10 items-center">
-
         {/* LEFT: IMAGE */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6 }}
           className="overflow-hidden rounded-sm shadow-md"
         >
@@ -279,7 +294,8 @@ const About = () => {
         {/* RIGHT: TEXT */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
           <p className="uppercase tracking-[0.25em] text-3xl text-blue-400 mb-5 font-peckham">
@@ -291,8 +307,8 @@ const About = () => {
           </h2>
 
           <p className="text-sm md:text-base text-gray-700 mb-6">
-            Har site par hum sirf kaam nahi, responsibility bhi lete hain — planning,
-            BOQ, execution & after-service support.
+            Har site par hum sirf kaam nahi, responsibility bhi lete hain —
+            planning, BOQ, execution & after-service support.
           </p>
 
           <div className="space-y-3 text-sm md:text-base text-gray-700">

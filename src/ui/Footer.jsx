@@ -110,7 +110,7 @@ const Footer = () => {
 
       {/* Bottom Strip */}
       <div className="text-center py-4 border-t border-gray-700 text-gray-400 text-sm">
-        © {new Date().getFullYear()} Saurabh Corporation — All Rights Reserved. Made by <a href="https://www.bimfrox.com/" className="text-green-300">BIMFROX</a>
+        © {new Date().getFullYear()} Saurabh Corporation — All Rights Reserved. <br />Made by <a href="https://www.bimfrox.com/" className="text-green-300">BIMFROX</a>
       </div>
     </footer>
   );
