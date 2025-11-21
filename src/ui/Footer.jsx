@@ -80,11 +80,35 @@ const Footer = () => {
         <div>
           <h3 className="font-bold mb-4 text-white">Services</h3>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li className="hover:text-blue-500 transition">HVAC & Ducting</li>
-            <li className="hover:text-blue-500 transition">Insulation Works</li>
-            <li className="hover:text-blue-500 transition">Fabrication</li>
-            <li className="hover:text-blue-500 transition">Painting & Scaffolding</li>
-            <li className="hover:text-blue-500 transition">Labour Contracting</li>
+            <li>
+              <Link to="/service" className="hover:text-blue-500 transition">
+                HVAC & Ducting
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/service" className="hover:text-blue-500 transition">
+                Insulation Works
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/service" className="hover:text-blue-500 transition">
+                Fabrication
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/service" className="hover:text-blue-500 transition">
+                Painting & Scaffolding
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/service" className="hover:text-blue-500 transition">
+                Labour Contracting
+              </Link>
+            </li>
           </ul>
         </div>
 
